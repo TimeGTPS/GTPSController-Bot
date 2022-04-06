@@ -7,10 +7,9 @@ module.exports = {
 
     async run (client, message, args){
         const defaut_prefix = "q";
-        if (message.author.id !== config.cmdperm) return message.reply("Sorry you can't do this command!")
         const user = args[0]
-        const role = args[1]
-
+        const pass = args[1]
+      if(!message.member.roles.cache.some(r=>[config.cmdperm].includes(r.name)) ) return message.reply(`You can't use this command`);   
       if (user == null)
       {
       return message.reply(`Command = ${defaut_prefix}giverole [Player] [Role Number]`)
