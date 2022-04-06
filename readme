@@ -5,7 +5,7 @@ Credits: GuckTubeYT#3123
 
 How to use: 
 
-Go Inside Commands folder set the folder location of your players file and gems folders
+Go Inside Commands folder open the botconfig.json and set the folder location of your players file and gems folders
 make sure its something like this :
 
 {
