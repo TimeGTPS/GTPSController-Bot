@@ -3,7 +3,7 @@ const fs = require("fs");
 const config = require('./botconfig.json');
 module.exports = {
     name: "resetpass",
-    description: "The help command, what do you expect?",
+    description: "resets a players pass",
 
     async run (client, message, args){
       const defaut_prefix = "q";
