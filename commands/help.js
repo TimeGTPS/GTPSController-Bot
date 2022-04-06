@@ -12,6 +12,8 @@ module.exports = {
         .setTitle('✅|Help Commands')
         .addField(`${defaut_prefix}resetpass`, '[Player] [New Password] (Changing Password of A Specific User)')
         .addField(`${defaut_prefix}addgems`, '[Player] [Gem Amount] (Gives Gems to A Specific User)')
+        .addField(`${defaut_prefix}addlevel`, '[Player] [Level Amount] (Gives Levels to A Specific User)')
+        .addField(`${defaut_prefix}giverole`, '[Player] [rank number] (Gives Rank to A Specific User)')
         .setFooter(`GTPSController Bot (c) 2022`, client.user.displayAvatarURL())
         .setTimestamp()
         message.channel.send(moderation);
