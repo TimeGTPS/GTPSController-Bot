@@ -1,0 +1,24 @@
+this bot was revived since it was not working on gucktube's github i am remaking this bot for some of you out there    
+Remade by : セクシーTime#3810
+Credits: GuckTubeYT#3123
+
+
+How to use: 
+
+Go Inside Commands folder set the folder location of your players file and gems folders
+make sure its something like this :
+
+{
+"player": "C:\\Users\\Add\\Documents\\Folders\\players",
+"gemconf" : "C:\\Users\\Add\\Documents\\Folders\\gemdb"
+}
+
+and in the bot files config.json make sure u setup the token and ur prefix 
+
+{
+ "token": "bottoken",
+ "default_prefix": "q",
+ "nothing": ""
+}
+
+thats all for now will be updated more and more later on!
