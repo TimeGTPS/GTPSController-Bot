@@ -1,24 +1,24 @@
 const Discord = require('discord.js');
 const fs = require("fs");
 const config = require('./botconfig.json');
-const bcrypt = require("bcrypt");
 module.exports = {
     name: "addgems",
     description: "The help command, what do you expect?",
 
     async run (client, message, args){
-        //if (message.author.id !== '1231231231231' && message.author.id !== '933749403146125454') return message.reply("Sorry you can't do this command!")
+      const defaut_prefix = "q";
+      if (message.author.id !== config.cmdperm) return message.reply("Sorry you can't do this command!")
         const user = args[0]
         const gems = args[1]
 
         if (args[0] == null)
         {
-        return message.reply(`Usage: qaddgems [Player] [Gems Amount]`)
+        return message.reply(`Usage: ${defaut_prefix}addgems [Player] [Gems Amount]`)
         }
 
         if (args[1] == null)
         {
-        return message.reply(`Usage: qaddgems [Player] [Gems Amount]`)
+        return message.reply(`Usage: ${defaut_prefix}addgems [Player] [Gems Amount]`)
         }
 
         if (fs.existsSync(config.gemconf + `\\_${args[0]}.txt`)) {
