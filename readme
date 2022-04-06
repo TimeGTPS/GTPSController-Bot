@@ -18,8 +18,7 @@ and in the bot files config.json make sure u setup the token and ur prefix
 
 {
  "token": "bottoken",
- "default_prefix": "q",
- "nothing": ""
+ "default_prefix": "q"
 }
 
 thats all for now will be updated more and more later on!
