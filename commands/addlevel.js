@@ -42,7 +42,7 @@ module.exports = {
       playername2.level = levelss;
 
       fs.writeFile(playername1, JSON.stringify(playername2), function writeJSON() {
-          return message.reply(`Level has been Given!\n\nof player named: ${args[0]}\nGive Level: ${args[1]}\nTotal Level: ${playername2.level}\n\nPlease Re-login for take the effect`)
+          return message.reply(`✅Level added!\nPlayer: ${args[0]}\nGiven Level: ${args[1]}\nTotal Level: ${playername2.level}`)
         })
       })
     }

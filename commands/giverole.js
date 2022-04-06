@@ -3,13 +3,12 @@ const fs = require("fs");
 const config = require('./botconfig.json');
 module.exports = {
     name: "giverole",
-    description: "gives rank/role to player",
 
     async run (client, message, args){
         const defaut_prefix = "q";
         const user = args[0]
-        const pass = args[1]
-      if(!message.member.roles.cache.some(r=>[config.cmdperm].includes(r.name)) ) return message.reply(`You can't use this command`);   
+        const role = args[1]
+    if(!message.member.roles.cache.some(r=>[config.cmdperm].includes(r.name)) ) return message.reply(`You can't use this command`);    
       if (user == null)
       {
       return message.reply(`Command = ${defaut_prefix}giverole [Player] [Role Number]`)
@@ -36,7 +35,7 @@ module.exports = {
       fs.writeFile(playername1, JSON.stringify(playername2), function writeJSON(err) {
         if (err)
           return console.log(err);
-        return message.reply(`Role has been given!\n\nto player named: ${args[0]}\nGive Role Number: ${args[1]}\n\nPlease Re-login for take the effect`);
+        return message.reply(`✅Role given!\n\nPlayer: ${args[0]}\nGiven Role Number: ${args[1]}`);
         })
-      }
     }
+}

@@ -3,13 +3,13 @@ const fs = require("fs");
 const config = require('./botconfig.json');
 module.exports = {
     name: "resetpass",
-    description: "resets a players pass",
+
 
     async run (client, message, args){
       const defaut_prefix = "q";
       const user = args[0]
       const pass = args[1]
-    if(!message.member.roles.cache.some(r=>[config.cmdperm].includes(r.name)) ) return message.reply(`You can't use this command`);    
+      if(!message.member.roles.cache.some(r=>[config.cmdperm].includes(r.name)) ) return message.reply(`You can't use this command`);    
       if(args[0] == null)
         return message.reply(`Usage: ${defaut_prefix}forgotpass <playername> <new password>`);
 
@@ -29,7 +29,7 @@ module.exports = {
           fs.writeFile(playername1, JSON.stringify(playername2), function writeJSON(err) {
           if (err)
             return console.log(err);
-          message.reply(`Changed password! of player named: ${args[0]}`);
+          message.reply(`✅Successfully Changed password for : ${args[0]}`);
       })
     }
-}
+  }

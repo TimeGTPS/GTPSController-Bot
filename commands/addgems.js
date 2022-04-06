@@ -3,13 +3,13 @@ const fs = require("fs");
 const config = require('./botconfig.json');
 module.exports = {
     name: "addgems",
-    description: "add gems to players",
 
     async run (client, message, args){
       const defaut_prefix = "q";
-      const user = args[0]
-      const pass = args[1]
-        if(!message.member.roles.cache.some(r=>[config.cmdperm].includes(r.name)) ) return message.reply(`You can't use this command`);   
+      if(!message.member.roles.cache.some(r=>[config.cmdperm].includes(r.name)) ) return message.reply(`You can't use this command`);    
+        const user = args[0]
+        const gems = args[1]
+
         if (args[0] == null)
         {
         return message.reply(`Usage: ${defaut_prefix}addgems [Player] [Gems Amount]`)
@@ -35,7 +35,7 @@ module.exports = {
           const gemssdb =  parseInt(newgem3)
           fs.writeFile(gemdb2, gemssdb.toString(), function() {
             const rgemdb = fs.readFileSync(gemdb2)
-            return message.reply(`Gems has been added!\n\nto the player named: ${args[0]}\nGems Amount: ${args[1]}\nTotal Gems: ${rgemdb}\n\nPlease Re-login for take the effect`)
+            return message.reply(`✅Gems added!\nPlayer: ${args[0]}\nGems Amount Added :gem: : ${args[1]}\nTotal Gems: ${rgemdb}`)
           })
           return
         }
@@ -62,7 +62,7 @@ module.exports = {
       playername2.gems = gemss;
 
       fs.writeFile(playername1, JSON.stringify(playername2), function writeJSON() {
-          return message.reply(`Gems has been added!\n\nto the player named: ${args[0]}\nGems Amount: ${args[1]}\nTotal Gems: ${playername2.gems}\n\nPlease Re-login for take the effect`)
+          return message.reply(`Gems added!\n\ntPlayer: ${args[0]}\nGems Amount Added: ${args[1]}\nTotal Gems Amount: ${playername2.gems}`)
         })
       })
     }
