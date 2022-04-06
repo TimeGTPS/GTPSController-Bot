@@ -3,7 +3,7 @@ const fs = require("fs");
 const config = require('./botconfig.json');
 module.exports = {
     name: "giverole",
-    description: "The help command, what do you expect?",
+    description: "gives rank/role to player",
 
     async run (client, message, args){
         const defaut_prefix = "q";
