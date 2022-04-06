@@ -1,20 +1,20 @@
 const Discord = require('discord.js');
 const fs = require("fs");
 const config = require('./botconfig.json');
-const bcrypt = require("bcrypt");
 module.exports = {
     name: "resetpass",
     description: "The help command, what do you expect?",
 
     async run (client, message, args){
-        if (message.author.id !== '1231231231231' && message.author.id !== '933749403146125454') return message.reply("Sorry you can't do this command!")
-        const user = args[0]
-        const pass = args[1]
+      const defaut_prefix = "q";
+      if (message.author.id !== config.cmdperm) return message.reply("Sorry you can't do this command!")     
+       const user = args[0]
+      const pass = args[1]
       if(args[0] == null)
-        return message.reply(`Usage: ${pfix}forgotpass <playername> <new password>`);
+        return message.reply(`Usage: ${defaut_prefix}forgotpass <playername> <new password>`);
 
         if(args[1] == null)
-        return message.reply(`Usage: ${pfix}forgotpass <playername> <new password>`);
+        return message.reply(`Usage: ${defaut_prefix}forgotpass <playername> <new password>`);
 
         if (!fs.existsSync(config.player)) {
         return message.reply("Player Folder not found! Please set on config.json")
