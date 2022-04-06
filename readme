@@ -11,7 +11,7 @@ make sure its something like this :
 {
 "player": "C:\\Users\\Add\\Documents\\Folders\\players",
 "gemconf" : "C:\\Users\\Add\\Documents\\Folders\\gemdb",
-"cmdperm" : "discord account id",
+"cmdperm" : "discord role name",
 }
 
 and in the bot files config.json make sure u setup the token and ur prefix 
