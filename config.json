@@ -1,5 +1,4 @@
 {
  "token": "bottoken",
- "default_prefix": "q",
- "nothing": ""
+ "default_prefix": "q"
 }
