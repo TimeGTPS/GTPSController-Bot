@@ -26,7 +26,7 @@ module.exports = {
       if (!fs.existsSync(config.player + "\\" + "_" + user + ".json")) {
         return message.reply("Player Not Found!")
       }
-      let playername1 = `./` + config.player + `/${args[0]}.json`
+      let playername1 = config.player + `\\_${args[0]}.json`
       let playername2 = require(playername1);
 
       const rolenum =  parseInt(role)
